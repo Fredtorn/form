@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.myGrid {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+.formContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 40px 1fr 1fr 1fr 1fr 1fr;
+    height: 500px;
+    width: 1000px;
+    background-color: #d6d6d6;
+    padding: 20px;
+
+}
+
+.heading {
+    grid-column: 1/5;
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    align-self: center;
+
+}
+
+.formContainer img {
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+}
+
+
+.vehicle {
+    background-color: #eaeaea;
+    height: 150px;
+    padding: 15px 70px;
+    border: 0.5px solid black;
+}
+
+.optionCounty,
+.optionStation {
+    grid-column: span 4;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+}
