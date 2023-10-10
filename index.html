@@ -9,6 +9,52 @@
 </head>
 
 <body>
+    <div class="myGrid">
+        <form action="https://httpbin.org/anything" method="post">
+            <div class="formContainer">
+                <p class="heading">Välj först: vad vill du hyra?</p>
+                <div class="vehicle">
+                    <img src="images/car.png" alt="">
+                    <input type="radio" name="type_vehicle" value="Bil">
+                    <label for="car">Bil</label>
+                </div>
+                <div class="vehicle">
+                    <img src="images/truck.png" alt="">
+                    <input type="radio" name="type_vehicle" value="Lastbil">
+                    <label for="truck">Lastbil</label>
+                </div>
+                <div class="vehicle">
+                    <img src="images/trailer.png" alt="">
+                    <input type="radio" name="type_vehicle" value="Släpvagn">
+                    <label for="trailer">Släpvagn</label>
+                </div>
+                <div class="vehicle">
+                    <img src="images/other.png" alt="">
+                    <input type="radio" name="type_vehicle" value="Övrigt">
+                    <label for="other">Övrigt</label>
+                </div>
+
+                <div class="optionCounty">
+                    <label class="heading" for="county">Välj län</label>
+                    <select name="optionCount" id="county">
+                        <option value="">Välj ett län</option>
+                        <option value="stockholm">Stockholms län</option>
+                    </select>
+                </div>
+                <div class="optionStation">
+                    <label class="heading" for="station">Välj station</label>
+                    <input id="station" name="station" type="text">
+                </div>
+                <div class="datePickUp"></div>
+                <input type="date" name="date" id="date">
+                <input type="time">
+                <div class="dateReturn"></div>
+                <div class="timePickUp"></div>
+                <div class="timeReturn"></div>
+
+            </div>
+        </form>
+    </div>
 
 </body>
 
