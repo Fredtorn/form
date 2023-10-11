@@ -5,28 +5,58 @@
 
 .myGrid {
     display: grid;
-    place-content: center;
+    grid-template-rows: 100px 40px auto;
+    justify-content: center;
     height: 100vh;
+}
+
+.logo {
+    width: 150px;
+    padding: 20px;
+}
+
+.carRental {
+    width: 500px;
+    height: 40px;
+    background-color: #ed8b00;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    margin: 0;
+}
+
+.carRental h2 {
+    margin: 0;
+    height: 40px;
+    padding-top: 5px
+}
+
+.border {
+    width: 1000px;
+    height: 2px;
+    background-color: #ed8b00;
+    align-items: end;
 }
 
 .formContainer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 40px 1fr 1fr 1fr 1fr 1fr;
-    height: 500px;
+    grid-template-rows: 40px auto auto auto auto auto auto auto auto auto;
+    height: auto;
     width: 1000px;
     background-color: #d6d6d6;
     padding: 20px;
+    margin-top: 30px;
 
 }
 
 .heading {
     grid-column: 1/5;
     margin: 0;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     align-self: center;
-
+    padding: 20px 0;
 }
 
 .formContainer img {
@@ -44,11 +74,77 @@
 }
 
 .optionCounty,
-.optionStation {
+.optionStation,
+.send {
     grid-column: span 4;
+    height: auto;
+    margin-top: 30px;
+}
+
+.send {
+    padding: 30px 0;
 }
 
 input[type="text"],
 select {
     width: 100%;
+    height: 40px;
+}
+
+.datePickUp,
+.dateReturn,
+.timePickUp,
+.timeReturn,
+.password {
+    grid-column: span 2;
+    margin-top: 30px;
+
+}
+
+.password {
+    grid-row: span 2;
+}
+
+input[type="time"],
+input[type="date"],
+input[type="password"] {
+    width: 90%;
+    height: 40px;
+}
+
+input[type="email"] {
+    width: 95%;
+    height: 40px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ed8b00;
+    color: white;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.name,
+.policy {
+    grid-column: span 2;
+}
+
+.email {
+    grid-column: span 4;
+}
+
+input[type="text"] {
+    width: 90%;
+}
+
+
+select {
+    appearance: none;
+    background-image: url(images/arrow.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    height: 100%;
 }

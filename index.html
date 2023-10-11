@@ -10,6 +10,11 @@
 
 <body>
     <div class="myGrid">
+        <img class="logo" src="images/circleK_logo.png" alt="">
+        <div class="carRental">
+            <h2>Biluthyrning</h2>
+            <div class="border"></div>
+        </div>
         <form action="https://httpbin.org/anything" method="post">
             <div class="formContainer">
                 <p class="heading">Välj först: vad vill du hyra?</p>
@@ -33,25 +38,68 @@
                     <input type="radio" name="type_vehicle" value="Övrigt">
                     <label for="other">Övrigt</label>
                 </div>
-
                 <div class="optionCounty">
                     <label class="heading" for="county">Välj län</label>
                     <select name="optionCount" id="county">
                         <option value="">Välj ett län</option>
-                        <option value="stockholm">Stockholms län</option>
+                        <option value="uppsala">Uppsala län</option>
+                        <option value="jönköping">Jönköpings län</option>
+                        <option value="kalmar">Kalmar län</option>
+                        <option value="blekinge">Blekinge län</option>
+                        <option value="skåne">Skåne län</option>
+                        <option value="hallands">Hallands län</option>
+                        <option value="värmlands">Värmlands län</option>
+                        <option value="örebro">Örebro län</option>
+                        <option value="dalarnas">Dalarnas län</option>
+                        <option value="gävleborg">Gärvleborgs län</option>
+                        <option value="jämtlands">Jämtlands län</option>
+                        <option value="norrbottens">Norrbottens län</option>
                     </select>
                 </div>
                 <div class="optionStation">
                     <label class="heading" for="station">Välj station</label>
-                    <input id="station" name="station" type="text">
+                    <select name="optionStation" id="station">
+                        <option value="norrbottens">Norrbottens län</option>
+                    </select>
                 </div>
-                <div class="datePickUp"></div>
-                <input type="date" name="date" id="date">
-                <input type="time">
-                <div class="dateReturn"></div>
-                <div class="timePickUp"></div>
-                <div class="timeReturn"></div>
-
+                <div class="datePickUp">
+                    <p class="heading">Hämtas:</p>
+                    <input type="date" name="date" id="date">
+                </div>
+                <div class="dateReturn">
+                    <p class="heading">Lämnas:</p>
+                    <input type="date" name="date" id="date">
+                </div>
+                <div class="timePickUp">
+                    <input type="time">
+                </div>
+                <div class="timeReturn">
+                    <input type="time">
+                </div>
+                <p class="heading">Skapa profil</p>
+                <div class="name">
+                    <label class="heading" for="firstname">Förnamn</label>
+                    <input type="text" name="firstname" value="Förnamn">
+                </div>
+                <div class="name">
+                    <label class="heading" for="lastname">Efternamn</label>
+                    <input type="text" name="lastname" value="Förnamn">
+                </div>
+                <div class="email">
+                    <label class="heading" for="email">Mailadress</label>
+                    <input type="email">
+                </div>
+                <div class="password">
+                    <label class="heading" for="password">Skapa lösenord</label>
+                    <input type="password" name="password" id="password">
+                </div>
+                <div class="policy">
+                    <input type="checkbox" name="checkbox" id="checkbox">
+                    <p>Genom att klicka på ”Skapa profil” godkänner jag CircleK:s allmäna villkor</p>
+                </div>
+                <div class="send">
+                    <button type="submit">Skicka</button>
+                </div>
             </div>
         </form>
     </div>
