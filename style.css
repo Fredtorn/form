@@ -165,6 +165,10 @@ input[type="email"] {
 
 }
 
+a {
+    color: black;
+}
+
 button {
     width: 100%;
     padding: 10px;
