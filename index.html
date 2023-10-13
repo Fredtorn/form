@@ -18,29 +18,31 @@
         <form action="https://httpbin.org/anything" method="post">
             <div class="formContainer">
                 <p class="heading">Välj först: vad vill du hyra?</p>
-                <div class="vehicle">
-                    <img src="images/car.png" alt="">
-                    <input type="radio" name="type_vehicle" value="Bil">
-                    <label for="car">Bil</label>
-                </div>
-                <div class="vehicle">
-                    <img src="images/truck.png" alt="">
-                    <input type="radio" name="type_vehicle" value="Lastbil">
-                    <label for="truck">Lastbil</label>
-                </div>
-                <div class="vehicle">
-                    <img src="images/trailer.png" alt="">
-                    <input type="radio" name="type_vehicle" value="Släpvagn">
-                    <label for="trailer">Släpvagn</label>
-                </div>
-                <div class="vehicle">
-                    <img src="images/other.png" alt="">
-                    <input type="radio" name="type_vehicle" value="Övrigt">
-                    <label for="other">Övrigt</label>
+                <div class="vehicleContainer">
+                    <div class="vehicle">
+                        <img src="images/car.png" alt="">
+                        <input type="radio" name="optionvehicle" value="car" required>
+                        <label for="car">Bil</label>
+                    </div>
+                    <div class="vehicle">
+                        <img src="images/truck.png" alt="">
+                        <input type="radio" name="optionvehicle" value="truck" required>
+                        <label for="truck">Lastbil</label>
+                    </div>
+                    <div class="vehicle">
+                        <img src="images/trailer.png" alt="">
+                        <input type="radio" name="optionvehicle" value="trailer" required>
+                        <label for="trailer">Släpvagn</label>
+                    </div>
+                    <div class="vehicle">
+                        <img src="images/other.png" alt="">
+                        <input type="radio" name="optionvehicle" value="other" required>
+                        <label for="other">Övrigt</label>
+                    </div>
                 </div>
                 <div class="optionCounty">
                     <label class="heading" for="county">Välj län</label>
-                    <select name="optionCount" id="county">
+                    <select name="optionCounty" id="county" required>
                         <option value="">Välj ett län</option>
                         <option value="uppsala">Uppsala län</option>
                         <option value="jönköping">Jönköpings län</option>
@@ -58,44 +60,50 @@
                 </div>
                 <div class="optionStation">
                     <label class="heading" for="station">Välj station</label>
-                    <select name="optionStation" id="station">
-                        <option value="norrbottens">Norrbottens län</option>
+                    <select name="optionStation" id="station" required>
+                        <option value="">Välj</option>
+                        <option value="center">Circle K centrum</option>
+                        <option value="north">Circle K norra</option>
+                        <option value="south">Circle K södra</option>
+                        <option value="west">Circle K västra</option>
+                        <option value="east">Circle K östra</option>
                     </select>
                 </div>
                 <div class="datePickUp">
                     <p class="heading">Hämtas:</p>
-                    <input type="date" name="date" id="date">
+                    <input type="date" name="datePickUp" id="datePickUp" required>
                 </div>
                 <div class="dateReturn">
                     <p class="heading">Lämnas:</p>
-                    <input type="date" name="date" id="date">
+                    <input type="date" name="dateReturn" id="dateReturn" required>
                 </div>
                 <div class="timePickUp">
-                    <input type="time">
+                    <input type="time" name="timePickUp" id="timePickUp" required>
                 </div>
                 <div class="timeReturn">
-                    <input type="time">
+                    <input type="time" name="timeReturn" id="timeReturn" required>
                 </div>
-                <p class="heading">Skapa profil</p>
+                <p class="profile">Skapa profil</p>
                 <div class="name">
                     <label class="heading" for="firstname">Förnamn</label>
-                    <input type="text" name="firstname" value="Förnamn">
+                    <input type="text" name="firstname" required>
                 </div>
                 <div class="name">
                     <label class="heading" for="lastname">Efternamn</label>
-                    <input type="text" name="lastname" value="Förnamn">
+                    <input type="text" name="lastname" required>
                 </div>
                 <div class="email">
                     <label class="heading" for="email">Mailadress</label>
-                    <input type="email">
+                    <input type="email" required>
                 </div>
                 <div class="password">
                     <label class="heading" for="password">Skapa lösenord</label>
-                    <input type="password" name="password" id="password">
+                    <input type="password" name="password" id="password" required>
                 </div>
                 <div class="policy">
-                    <input type="checkbox" name="checkbox" id="checkbox">
-                    <p>Genom att klicka på ”Skapa profil” godkänner jag CircleK:s allmäna villkor</p>
+                    <input type="checkbox" name="checkbox" id="checkbox" required>
+                    <p>Genom att klicka på ”Skapa profil” godkänner jag CircleK:s allmäna villkor.<u> Läs mer om de
+                            allmäna villkoren här.</u> </p>
                 </div>
                 <div class="send">
                     <button type="submit">Skicka</button>
