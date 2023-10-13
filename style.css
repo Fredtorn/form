@@ -7,7 +7,6 @@
     display: grid;
     grid-template-rows: 100px 40px auto;
     justify-content: center;
-    height: 100vh;
 }
 
 .logo {
@@ -20,7 +19,7 @@
     height: 40px;
     background-color: #ed8b00;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
     text-align: center;
     margin: 0;
 }
@@ -28,7 +27,7 @@
 .carRental h2 {
     margin: 0;
     height: 40px;
-    padding-top: 5px
+    padding-top: 10px
 }
 
 .border {
@@ -56,15 +55,18 @@
     font-size: 18px;
     font-weight: bold;
     align-self: center;
-    padding: 20px 0;
 }
 
 .formContainer img {
     object-fit: cover;
-    width: 100px;
+    width: auto;
     height: 100px;
 }
 
+.vehicleContainer {
+    grid-column: 1/4;
+    display: flex;
+}
 
 .vehicle {
     background-color: #eaeaea;
@@ -81,14 +83,28 @@
     margin-top: 30px;
 }
 
-.send {
-    padding: 30px 0;
+select {
+    appearance: none;
+    background-image: url(images/arrow.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    height: 100%;
 }
+
+input[type="radio"] {
+    accent-color: #c31205;
+}
+
 
 input[type="text"],
 select {
     width: 100%;
     height: 40px;
+    padding: 5px;
+}
+
+.name {
+    height: 80px;
 }
 
 .datePickUp,
@@ -99,6 +115,13 @@ select {
     grid-column: span 2;
     margin-top: 30px;
 
+}
+
+.profile {
+    grid-column: 1/5;
+    font-size: 24px;
+    font-weight: bold;
+    align-self: center;
 }
 
 .password {
@@ -112,19 +135,17 @@ input[type="password"] {
     height: 40px;
 }
 
+input[type="text"] {
+    width: 90%;
+}
+
 input[type="email"] {
     width: 95%;
     height: 40px;
 }
 
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #ed8b00;
-    color: white;
-    border: none;
-    font-size: 24px;
-    font-weight: bold;
+.email {
+    grid-column: span 4;
 }
 
 .name,
@@ -132,19 +153,24 @@ button {
     grid-column: span 2;
 }
 
-.email {
-    grid-column: span 4;
+.policy {
+    display: flex;
+    margin: 30px 30px 30px 0;
+    justify-content: center;
 }
 
-input[type="text"] {
-    width: 90%;
+.policy p {
+    padding-left: 30px;
+    font-style: italic;
+
 }
 
-
-select {
-    appearance: none;
-    background-image: url(images/arrow.png);
-    background-repeat: no-repeat;
-    background-position: right center;
-    height: 100%;
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ed8b00;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border: #b76d05 solid 1px;
 }
